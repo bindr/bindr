@@ -21,7 +21,10 @@
     "dist/"
   ],
   "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bootswatch": "^3.3.7",
     "director": "^1.2.8",
+    "font-awesome": "^4.7.0",
     "marked": "^0.3.6",
     "superagent": "^3.5.2",
     "zepto": "^1.2.0"
