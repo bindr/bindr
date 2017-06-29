@@ -1,0 +1,49 @@
+{
+  "name": "bindr",
+  "version": "0.0.1",
+  "description": "Convention-based Markdown documentation generator.",
+  "author": "cypherix93",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypherix93/bindr.git"
+  },
+  "homepage": "https://github.com/cypherix93/bindr#readme",
+  "bugs": {
+    "url": "https://github.com/cypherix93/bindr/issues"
+  },
+  "keywords": [
+    "markdown",
+    "documentation"
+  ],
+  "license": "UNLICENSED",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@types/node": "^8.0.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-run": "^1.7.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.1.7",
+    "merge-stream": "^1.0.1",
+    "run-sequence": "^1.2.2",
+    "tslint": "^5.1.0",
+    "typescript": "^2.3.4"
+  },
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp",
+    "clean": "npm run gulp clean",
+    "build": "npm run gulp build",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
+
