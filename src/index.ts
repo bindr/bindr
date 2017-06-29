@@ -5,6 +5,6 @@ import './vendor';
 import './styles/main';
 
 // Init the app
-import {startup} from './config/Startup';
+import {startup} from './scripts/config/Startup';
 
 startup();
