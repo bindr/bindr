@@ -1,4 +1,4 @@
-const layoutTemplate = require('../../views/index.html');
+const layoutTemplate = require('../../views/layout.html');
 
 export async function initLayout() {
     $('body')
