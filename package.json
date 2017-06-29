@@ -22,10 +22,13 @@
   ],
   "dependencies": {
     "director": "^1.2.8",
-    "marked": "^0.3.6"
+    "marked": "^0.3.6",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
+    "@types/marked": "^0.0.28",
     "@types/node": "^8.0.4",
+    "@types/superagent": "^3.5.1",
     "css-loader": "^0.28.4",
     "file-loader": "^0.11.2",
     "html-loader": "^0.4.5",

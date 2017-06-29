@@ -1,0 +1,3 @@
+interface IConfigOptions {
+    theme?: string;
+}

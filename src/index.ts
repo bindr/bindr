@@ -1,3 +1,5 @@
-// Vendor
-import 'marked';
-import 'director';
+import './vendor';
+
+import {startup} from './config/Startup';
+
+startup();
