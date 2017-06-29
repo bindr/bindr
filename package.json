@@ -16,8 +16,7 @@
     "documentation"
   ],
   "license": "UNLICENSED",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/js/bindr.js",
   "files": [
     "dist/"
   ],
@@ -26,24 +25,23 @@
   },
   "devDependencies": {
     "@types/node": "^8.0.4",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-cached": "^1.1.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-debug": "^3.1.0",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-run": "^1.7.1",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-typescript": "^3.1.7",
-    "merge-stream": "^1.0.1",
-    "run-sequence": "^1.2.2",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.5.3",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.2.1",
     "tslint": "^5.1.0",
-    "typescript": "^2.3.4"
+    "typescript": "^2.3.4",
+    "webpack": "^3.0.0"
   },
   "scripts": {
-    "gulp": "./node_modules/.bin/gulp",
-    "clean": "npm run gulp clean",
-    "build": "npm run gulp build",
+    "clean": "rimraf ./dist/",
+    "build": "npm run clean & npm run webpack",
+    "webpack": "./node_modules/.bin/webpack",
     "prepublishOnly": "npm run build",
     "prepack": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
