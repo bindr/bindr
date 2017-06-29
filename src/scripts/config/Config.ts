@@ -6,11 +6,15 @@ class Config {
 export async function initConfig() {
     const config = new Config();
 
-    const configResponse = await superagent.get('./config.json');
+    try {
+        const configResponse = await superagent.get('./bindr.json');
 
-    if (configResponse.body) {
-        Object.assign(config, configResponse.body);
+        if (configResponse.body) {
+            Object.assign(config, configResponse.body);
+        }
+    }
+    catch (err) {
     }
 
-    Configuration = config;
+    // Configuration = config;
 }
