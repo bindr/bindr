@@ -1,7 +1,16 @@
-class Configuration {
-    init(config: IConfigOptions) {
-        Object.assign(this, config);
-    }
+import superagent = require('superagent');
+
+class Config {
 }
 
-export const Config = new Configuration();
+export async function initConfig() {
+    const config = new Config();
+
+    const configResponse = await superagent.get('./config.json');
+
+    if (configResponse.body) {
+        Object.assign(config, configResponse.body);
+    }
+
+    Configuration = config;
+}

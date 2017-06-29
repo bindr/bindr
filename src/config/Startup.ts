@@ -1,15 +1,5 @@
-import superagent = require('superagent');
+import {initConfig} from './Config';
 
-import {Config} from './Config';
-
-function loadConfig() {
-    superagent.get('./config.json', response => {
-        if (response.body) {
-            Config.init(response.body);
-        }
-    });
-}
-
-export function startup() {
-    loadConfig();
+export async function startup() {
+    await initConfig();
 }
