@@ -1,3 +1,5 @@
+import './webpack-config';
+
 // Vendors
 import './vendor';
 

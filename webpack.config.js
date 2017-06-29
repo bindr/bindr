@@ -11,7 +11,7 @@ const entries = {
     'bindr': path.join(paths.src, 'index.ts')
 };
 
-module.exports = {
+const CONFIG = {
     context: __dirname,
     entry: entries,
     output: {
@@ -50,5 +50,22 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.ts', '.scss']
     },
-    plugins: []
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            }
+        })
+    ]
 };
+
+if (process.env.NODE_ENV === 'production') {
+    CONFIG.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            compress: true,
+            minimize: true
+        })
+    );
+}
+
+module.exports = CONFIG;
