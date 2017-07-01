@@ -1,4 +1,5 @@
 import superagent = require('superagent');
+const appConfig = require('../../../config.json') as IAppConfig;
 
 class Config {
 }
@@ -7,7 +8,7 @@ export async function initConfig() {
     const config = new Config();
 
     try {
-        const configResponse = await superagent.get('./bindr.json');
+        const configResponse = await superagent.get(appConfig.configFile);
 
         if (configResponse.body) {
             Object.assign(config, configResponse.body);
@@ -16,5 +17,5 @@ export async function initConfig() {
     catch (err) {
     }
 
-    // Configuration = config;
+    Configuration = config;
 }
