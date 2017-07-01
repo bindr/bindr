@@ -12,6 +12,8 @@ export async function initRouter() {
 }
 
 function setupRouteResolver(router: any) {
+    router.configure({});
+
     router.on('docs/(.*)',
         (path: string) => {
             onRouteResolve(path);
@@ -20,7 +22,7 @@ function setupRouteResolver(router: any) {
 }
 
 async function onRouteResolve(path: string) {
-    path = `./docs/${path}`;
+    path = processPath(path);
 
     const response = await superagent.get(path);
 
@@ -28,4 +30,21 @@ async function onRouteResolve(path: string) {
     const htmlText = parseMarkdown(markdownText);
 
     updateView(htmlText);
+}
+
+function processPath(path: string): string {
+    // Look under 'docs' by default
+    path = `./docs/${path}`;
+
+    // If path ends with '/', check for index file
+    if (path.endsWith('/')) {
+        path += 'index';
+    }
+
+    // Understand missing extension
+    if (!path.endsWith('.md')) {
+        path += '.md';
+    }
+
+    return path;
 }

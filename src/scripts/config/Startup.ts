@@ -1,9 +1,12 @@
 import {initConfig} from './Config';
 
-import * as LayoutBuilder from '../engine/LayoutBuilder';
+import {initLayout} from '../engine/LayoutBuilder';
+import {initRouter} from '../engine/RouteResolver';
 
 export async function startup() {
     await initConfig();
 
-    await LayoutBuilder.initLayout();
+    await initRouter();
+
+    await initLayout();
 }
