@@ -5,10 +5,14 @@ const paths = {};
 
 paths.root = __dirname;
 paths.src = path.join(paths.root, 'src');
+paths.bin = path.join(paths.root, 'bin');
 paths.dist = path.join(paths.root, 'dist');
 
+paths.app = path.join(paths.src, 'app');
+paths.cli = path.join(paths.src, 'cli');
+
 const entries = {
-    'bindr': path.join(paths.src, 'index.ts')
+    'bindr': path.join(paths.app, 'index.ts')
 };
 
 const CONFIG = {
