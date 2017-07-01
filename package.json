@@ -17,6 +17,7 @@
   ],
   "license": "UNLICENSED",
   "main": "./dist/js/bindr.js",
+  "bin": "./bin/cli.js",
   "files": [
     "dist/"
   ],
