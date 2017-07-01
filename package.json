@@ -28,7 +28,9 @@
     "font-awesome": "^4.7.0",
     "lunr": "^2.1.0",
     "marked": "^0.3.6",
+    "recursive-readdir": "^2.2.1",
     "superagent": "^3.5.2",
+    "yargs": "^8.0.2",
     "zepto": "^1.2.0"
   },
   "devDependencies": {
@@ -36,6 +38,7 @@
     "@types/marked": "^0.0.28",
     "@types/node": "^8.0.4",
     "@types/superagent": "^3.5.1",
+    "@types/yargs": "^8.0.0",
     "@types/zepto": "^1.0.28",
     "concurrently": "^3.5.0",
     "cross-env": "^5.0.1",

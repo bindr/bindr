@@ -12,7 +12,6 @@
     "target": "ES5",
     "lib": [
       "dom",
-      "dom.iterable",
       "scripthost",
       "es5",
       "es6",
