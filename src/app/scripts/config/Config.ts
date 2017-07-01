@@ -4,6 +4,8 @@ const appConfig = require('../../../config.json') as IAppConfig;
 class Config {
 }
 
+let currentConfig = {};
+
 export async function initConfig() {
     const config = new Config();
 
@@ -17,5 +19,7 @@ export async function initConfig() {
     catch (err) {
     }
 
-    Configuration = config;
+    currentConfig = config;
 }
+
+export const getCurrentConfig = () => currentConfig;
