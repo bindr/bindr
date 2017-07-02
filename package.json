@@ -5,11 +5,11 @@
   "author": "cypherix93",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cypherix93/bindr.git"
+    "url": "git+https://github.com/bindr/bindr.git"
   },
-  "homepage": "https://github.com/cypherix93/bindr#readme",
+  "homepage": "https://github.com/bindr/bindr#readme",
   "bugs": {
-    "url": "https://github.com/cypherix93/bindr/issues"
+    "url": "https://github.com/bindr/bindr/issues"
   },
   "keywords": [
     "markdown",
@@ -17,7 +17,6 @@
   ],
   "license": "UNLICENSED",
   "main": "./dist/js/bindr.js",
-  "bin": "./bin/cli.js",
   "files": [
     "dist/"
   ],

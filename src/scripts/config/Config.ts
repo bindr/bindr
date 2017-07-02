@@ -1,5 +1,5 @@
 import superagent = require('superagent');
-const appConfig = require('../../../config.json') as IAppConfig;
+const appConfig = require('../../config.json') as IAppConfig;
 
 class Config {
 }
