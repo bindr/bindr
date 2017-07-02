@@ -27,9 +27,7 @@
     "font-awesome": "^4.7.0",
     "lunr": "^2.1.0",
     "marked": "^0.3.6",
-    "recursive-readdir": "^2.2.1",
     "superagent": "^3.5.2",
-    "yargs": "^8.0.2",
     "zepto": "^1.2.0"
   },
   "devDependencies": {
