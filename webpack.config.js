@@ -31,7 +31,10 @@ const CONFIG = {
             },
             {
                 test: /\.vue$/,
-                loaders: ['vue-loader']
+                loader: 'vue-loader',
+                options: {
+                    esModule: true
+                }
             },
             {
                 test: /\.html$/,

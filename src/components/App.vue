@@ -1,15 +1,6 @@
 <template>
     <div id="AppComponent">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="#" class="navbar-brand">
-                        <img class="navbar-brand-logo" src="../assets/images/logo_shadow.png" alt="Bindr Logo"/>
-                        Bindr
-                    </a>
-                </div>
-            </div>
-        </nav>
+        <TopNav></TopNav>
 
         <div class="container bindr-root">
             <div class="row">
