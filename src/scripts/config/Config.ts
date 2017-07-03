@@ -1,26 +1,30 @@
 import superagent = require('superagent');
 
-export const CONFIG_FILE = 'bindr.json';
-
-class Config {
-}
-
-let currentConfig = {};
+let currentConfig: IConfigOptions;
 
 export async function initConfig() {
-    const config = new Config();
+    currentConfig = {
+        config: 'bindr.json',
+        manifest: 'manifest.json',
+        docs: './docs/',
+        theme: 'cosmo'
+    };
 
     try {
-        const configResponse = await superagent.get(CONFIG_FILE);
+        const configResponse = await superagent.get(currentConfig.config);
 
         if (configResponse.body) {
-            Object.assign(config, configResponse.body);
+            currentConfig = Object.assign(currentConfig, configResponse.body);
         }
     }
     catch (err) {
     }
-
-    currentConfig = config;
 }
 
-export const getCurrentConfig = () => currentConfig;
+export async function getCurrentConfig(): Promise<IConfigOptions> {
+    if (!currentConfig) {
+        await initConfig();
+    }
+
+    return currentConfig;
+}

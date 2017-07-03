@@ -5,10 +5,6 @@ const NAVIGATION_TEMPLATE = require('../../../views/partials/nav.html');
 
 const NAV_SELECTOR = 'bindr-nav';
 
-const GROUP_SELECTOR = '.list-group';
-const ITEM_SELECTOR = '.list-group-item';
-const TITLE_SELECTOR = '.list-group-item-title';
-
 export async function initNavigation() {
     const navMenu = await buildNavigation();
 
