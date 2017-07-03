@@ -20,7 +20,7 @@
   "files": [
     "dist/"
   ],
-  "dependencies": {
+  "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "bootswatch": "^3.3.7",
     "director": "^1.2.8",
@@ -28,9 +28,7 @@
     "lunr": "^2.1.0",
     "marked": "^0.3.6",
     "superagent": "^3.5.2",
-    "zepto": "^1.2.0"
-  },
-  "devDependencies": {
+    "zepto": "^1.2.0",
     "@types/lunr": "^0.5.29",
     "@types/marked": "^0.0.28",
     "@types/node": "^8.0.4",
