@@ -1,4 +1,5 @@
-import superagent = require('superagent');
+import superagent from 'superagent';
+
 import {ManifestEntry} from '../models/Manifest';
 import {getCurrentConfig} from './Config';
 

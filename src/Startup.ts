@@ -1,6 +1,15 @@
+import App from './components/App';
+
+import {initLayout} from './scripts/engine/Layout';
+import {initRouter} from './scripts/engine/Routing';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-Vue.use(VueRouter);
+export default async function startup() {
 
-import './components/App';
+    Vue.use(VueRouter);
+
+    await initLayout();
+
+    await initRouter(App);
+}

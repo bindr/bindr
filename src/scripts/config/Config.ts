@@ -1,4 +1,4 @@
-import superagent = require('superagent');
+import superagent from 'superagent';
 
 let currentConfig: IConfigOptions;
 

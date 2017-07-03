@@ -1,4 +1,4 @@
-import marked = require('marked');
+import marked from 'marked';
 
 export function parseMarkdown(markdownText: string) {
     return marked(markdownText);
