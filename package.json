@@ -1,6 +1,6 @@
 {
   "name": "@bindr/bindr",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "(WIP) Convention-based Markdown documentation generator.",
   "author": "cypherix93",
   "repository": {
@@ -21,6 +21,7 @@
     "dist/"
   ],
   "devDependencies": {
+    "@bindr/cli": "^0.0.1",
     "@types/lunr": "^0.5.29",
     "@types/marked": "^0.0.28",
     "@types/node": "^8.0.4",
