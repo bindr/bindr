@@ -11,5 +11,5 @@ export default async function startup() {
 
     await initLayout();
 
-    await initRouter(App);
+    // await initRouter(App);
 }

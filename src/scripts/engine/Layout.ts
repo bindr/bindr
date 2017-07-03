@@ -1,13 +1,30 @@
-const LAYOUT_TEMPLATE = require('../../views/layout.html');
+import Vue from 'vue';
+import App from '../../components/App.vue';
 
-export async function initLayout() {
+const VUE_ENTRY = 'vue-entry';
+
+export async function initLayout(): Promise<void> {
+    await prepareBody();
+
+    await initVue();
+}
+
+/* Prepare your body ;) */
+async function prepareBody(): Promise<void> {
     await new Promise(resolve => {
         $(document).ready(() => {
             $(document.body)
                 .empty()
-                .append(LAYOUT_TEMPLATE);
+                .append(`<${VUE_ENTRY}>`);
 
             resolve();
         });
+    });
+}
+
+async function initVue(): Promise<void> {
+    new Vue({
+        el: VUE_ENTRY,
+        render: h => h(App)
     });
 }
