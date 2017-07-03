@@ -30,7 +30,11 @@ const CONFIG = {
                 loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(html)$/,
+                test: /\.vue$/,
+                loaders: ['vue-loader']
+            },
+            {
+                test: /\.html$/,
                 loaders: ['html-loader']
             },
             {
