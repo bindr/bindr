@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import App from '../../components/App.vue';
+import VueRouter from 'vue-router';
 
-const VUE_ENTRY = 'vue-entry';
+import routes from './routing/Routes';
 
-export async function initLayout(): Promise<void> {
+export async function initBindr(): Promise<void> {
     await prepareBody();
 
     await initVue();
@@ -15,7 +15,7 @@ async function prepareBody(): Promise<void> {
         $(document).ready(() => {
             $(document.body)
                 .empty()
-                .append(`<${VUE_ENTRY}>`);
+                .append(`<div id="vue-entry"><router-view></router-view></div>`);
 
             resolve();
         });
@@ -23,8 +23,8 @@ async function prepareBody(): Promise<void> {
 }
 
 async function initVue(): Promise<void> {
-    new Vue({
-        el: VUE_ENTRY,
-        render: h => h(App)
-    });
+    const router = new VueRouter({routes});
+
+    new Vue({router})
+        .$mount(`#vue-entry`);
 }
