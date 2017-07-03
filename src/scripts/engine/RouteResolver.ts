@@ -1,7 +1,7 @@
 import superagent = require('superagent');
 
 import {parseMarkdown} from './MarkdownParser';
-import {updateView} from './ViewUpdater';
+import {updateView} from './ViewEngine';
 
 export async function initRouter() {
     const router = new Router({});
