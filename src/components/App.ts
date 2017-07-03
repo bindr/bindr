@@ -5,7 +5,7 @@ import TopNav from './layout/TopNav/TopNav.vue';
 
 @Component({
     components: {
-        TopNav: TopNav as any
+        TopNav
     }
 })
 export default class extends Vue {
