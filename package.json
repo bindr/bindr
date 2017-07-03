@@ -1,6 +1,6 @@
 {
   "name": "@bindr/bindr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convention-based Markdown documentation generator.",
   "author": "cypherix93",
   "repository": {
