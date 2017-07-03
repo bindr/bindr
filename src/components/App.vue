@@ -1,4 +1,4 @@
-<div>
+<div class="AppComponent">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -16,7 +16,9 @@
                 <!--<bindr-nav></bindr-nav>-->
             </div>
             <div class="col-xs-12  col-md-8 col-lg-9">
-                <!--<bindr-view></bindr-view>-->
+                <div id="router-container">
+                    <!--<router-view></router-view>-->
+                </div>
             </div>
         </div>
     </div>
