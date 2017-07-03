@@ -1,8 +1,9 @@
 import superagent = require('superagent');
+import {ManifestEntry} from '../models/Manifest';
 
 export const MANIFEST_FILE = 'manifest.json';
 
-let manifest = {};
+let manifest: ManifestEntry;
 
 async function initManifest() {
     try {
@@ -16,7 +17,7 @@ async function initManifest() {
     }
 }
 
-export async function getManifest() {
+export async function getManifest(): Promise<ManifestEntry> {
     if (!manifest) {
         await initManifest();
     }
