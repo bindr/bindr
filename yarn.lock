@@ -9,10 +9,6 @@
     directory-tree "^2.0.0"
     yargs "^8.0.2"
 
-"@types/jquery@2.x.x":
-  version "2.0.48"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.48.tgz#3e90d8cde2d29015e5583017f7830cb3975b2eef"
-
 "@types/lunr@^0.5.29":
   version "0.5.29"
   resolved "https://registry.yarnpkg.com/@types/lunr/-/lunr-0.5.29.tgz#9e60552ff4d0d4e0823b7062b21d968caa90f8fb"
@@ -34,6 +30,10 @@
 "@types/yargs@^8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-8.0.0.tgz#654d1e9d1729732a78436bde2b8076ee0d023693"
+
+"@types/zepto@^1.0.28":
+  version "1.0.28"
+  resolved "https://registry.yarnpkg.com/@types/zepto/-/zepto-1.0.28.tgz#65a77cdee25441a595fba4d68f857cf537aa7e9a"
 
 abbrev@1:
   version "1.1.0"
@@ -928,10 +928,6 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-director@^1.2.8:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/director/-/director-1.2.8.tgz#c6d9b4dd890e9aff5365183fe9cc8e73994cf2d5"
-
 directory-tree@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.0.0.tgz#c0a5fa0d642a1b1b7d10351b3c1db429770d8946"
@@ -1702,10 +1698,6 @@ isobject@^3.0.0:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
-
-jquery@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.1.9"
@@ -3774,3 +3766,7 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+zepto@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/zepto/-/zepto-1.2.0.tgz#e127bd9e66fd846be5eab48c1394882f7c0e4f98"

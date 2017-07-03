@@ -48,7 +48,10 @@ const CONFIG = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.ts', '.scss']
+        extensions: ['.js', '.ts', '.scss'],
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
     },
     plugins: [
         new webpack.DefinePlugin({
