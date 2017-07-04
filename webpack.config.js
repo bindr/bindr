@@ -31,9 +31,7 @@ const CONFIG = {
             {
                 test: /\.scss$/,
                 use: [
-                    {
-                        loader: 'style-loader'
-                    },
+                    'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
@@ -80,7 +78,8 @@ const CONFIG = {
     resolve: {
         extensions: ['.js', '.ts', '.scss'],
         alias: {
-            vue: 'vue/dist/vue.js'
+            vue: 'vue/dist/vue.js',
+            app: path.resolve('./src/')
         }
     },
     plugins: [
