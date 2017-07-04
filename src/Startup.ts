@@ -1,3 +1,5 @@
+import './scripts/hooks/ComponentHooks';
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
