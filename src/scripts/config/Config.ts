@@ -1,8 +1,8 @@
-import superagent = require('superagent');
+import superagent from 'superagent';
 
 let currentConfig: IConfigOptions;
 
-export async function initConfig() {
+export async function loadConfig() {
     currentConfig = {
         config: 'bindr.json',
         manifest: 'manifest.json',
@@ -23,7 +23,7 @@ export async function initConfig() {
 
 export async function getCurrentConfig(): Promise<IConfigOptions> {
     if (!currentConfig) {
-        await initConfig();
+        await loadConfig();
     }
 
     return currentConfig;

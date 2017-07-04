@@ -11,6 +11,9 @@ const entries = {
     'bindr': path.join(paths.src, 'index.ts')
 };
 
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = process.env.NODE_ENV === 'production';
+
 const CONFIG = {
     context: __dirname,
     entry: entries,
@@ -23,32 +26,62 @@ const CONFIG = {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: ['ts-loader']
+                use: ['ts-loader']
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: isDev
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: isDev
+                        }
+                    }
+                ]
             },
             {
-                test: /\.(html)$/,
-                loaders: ['html-loader']
+                test: /\.vue$/,
+                use: [
+                    {
+                        loader: 'vue-loader',
+                        options: {
+                            esModule: true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
             },
             {
                 test: /\.json$/,
-                loaders: ['json-loader']
+                use: ['json-loader']
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)/,
-                loader: 'file-loader?name=fonts/[name].[ext]'
+                use: 'file-loader?name=fonts/[name].[ext]'
             },
             {
                 test: /\.(jpg|jpeg|png|bmp|gif|tiff)/,
-                loader: 'file-loader?name=images/[name].[ext]'
+                use: 'file-loader?name=images/[name].[ext]'
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.ts', '.scss']
+        extensions: ['.js', '.ts', '.scss'],
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -59,11 +92,13 @@ const CONFIG = {
     ]
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
     CONFIG.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: true,
-            minimize: true
+            minimize: true,
+            mangle: true,
+            comments: false
         })
     );
 }

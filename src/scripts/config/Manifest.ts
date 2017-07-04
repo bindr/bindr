@@ -1,4 +1,5 @@
-import superagent = require('superagent');
+import superagent from 'superagent';
+
 import {ManifestEntry} from '../models/Manifest';
 import {getCurrentConfig} from './Config';
 
@@ -6,7 +7,7 @@ export const MANIFEST_FILE = 'manifest.json';
 
 let manifest: ManifestEntry;
 
-async function initManifest() {
+export async function loadManifest() {
     const config = await getCurrentConfig();
 
     try {
@@ -22,7 +23,7 @@ async function initManifest() {
 
 export async function getManifest(): Promise<ManifestEntry> {
     if (!manifest) {
-        await initManifest();
+        await loadManifest();
     }
 
     return manifest;
