@@ -1,6 +1,6 @@
 <template>
     <div id="DocumentViewComponent">
-        <div v-html="documentHtml"></div>
+        <div v-if="documentHtml" v-html="documentHtml"></div>
     </div>
 </template>
 

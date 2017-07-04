@@ -5,7 +5,7 @@ import {getDocumentHtml} from '../../../scripts/engine/DocumentLoader';
 
 @Component
 export default class extends Vue {
-    documentHtml = '';
+    documentHtml: string = null;
 
     async mounted() {
         this.documentHtml = await getDocumentHtml(this.$route.path);
