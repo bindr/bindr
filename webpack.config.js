@@ -11,6 +11,9 @@ const entries = {
     'bindr': path.join(paths.src, 'index.ts')
 };
 
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = process.env.NODE_ENV === 'production';
+
 const CONFIG = {
     context: __dirname,
     entry: entries,
@@ -34,13 +37,13 @@ const CONFIG = {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: isDev
                         }
                     },
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: isDev
                         }
                     }
                 ]
@@ -89,11 +92,13 @@ const CONFIG = {
     ]
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
     CONFIG.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: true,
-            minimize: true
+            minimize: true,
+            mangle: true,
+            comments: false
         })
     );
 }
