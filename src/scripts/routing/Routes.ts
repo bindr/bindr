@@ -9,7 +9,7 @@ const routes: RouteConfig[] = [
         component: App,
         children: [
             {
-                path: ':docPath?',
+                path: ':docPath*',
                 component: Document
             }
         ]

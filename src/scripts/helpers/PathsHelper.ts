@@ -33,7 +33,8 @@ export async function getDocFilePath(urlPath: string): Promise<string> {
         await buildUrlMap();
     }
 
-    console.log(docsUrlMap);
+    // Remove leading slash
+    urlPath = urlPath.substring(1);
 
     return docsUrlMap[urlPath];
 }
