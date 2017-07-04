@@ -23,34 +23,54 @@ const CONFIG = {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: ['ts-loader']
+                use: ['ts-loader']
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             },
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    esModule: true
-                }
+                use: [
+                    {
+                        loader: 'vue-loader',
+                        options: {
+                            esModule: true
+                        }
+                    }
+                ]
             },
             {
                 test: /\.html$/,
-                loaders: ['html-loader']
+                use: ['html-loader']
             },
             {
                 test: /\.json$/,
-                loaders: ['json-loader']
+                use: ['json-loader']
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)/,
-                loader: 'file-loader?name=fonts/[name].[ext]'
+                use: 'file-loader?name=fonts/[name].[ext]'
             },
             {
                 test: /\.(jpg|jpeg|png|bmp|gif|tiff)/,
-                loader: 'file-loader?name=images/[name].[ext]'
+                use: 'file-loader?name=images/[name].[ext]'
             }
         ]
     },
