@@ -2,9 +2,11 @@
     <div id="ListGroupContainer">
         <div class="list-group">
             <div class="list-group-item" v-for="item in entries">
-                <div class="list-group-item-title">
-                    {{item.title}}
-                </div>
+                <router-link to="/">
+                    <div class="list-group-item-title">
+                        {{item.title}}
+                    </div>
+                </router-link>
                 <SideNav v-if="item.children" :entries="item.children"></SideNav>
             </div>
         </div>
