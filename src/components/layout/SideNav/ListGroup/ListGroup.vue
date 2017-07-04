@@ -2,7 +2,7 @@
     <div id="ListGroupContainer">
         <div class="list-group">
             <div class="list-group-item" v-for="item in entries">
-                <router-link to="/">
+                <router-link :to="'/' + (item.url || '')" exact>
                     <div class="list-group-item-title">
                         {{item.title}}
                     </div>

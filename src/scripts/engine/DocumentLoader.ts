@@ -5,18 +5,25 @@ import {getManifest} from '../config/Manifest';
 import {parseMarkdown} from './MarkdownParser';
 
 export async function getDocumentHtml(path: string): Promise<string> {
-    const filePath = await getDocFilePath(path);
+    path = decodeURIComponent(path);
 
-    // TODO: Handle filePath undefined
+    try {
+        const filePath = await getDocFilePath(path);
 
-    const response = await superagent.get(filePath);
+        // TODO: Handle filePath undefined
 
-    // TODO: Handle 404 NOT FOUND
+        const response = await superagent.get(filePath);
 
-    const markdownText = response.text;
-    const htmlText = parseMarkdown(markdownText);
+        // TODO: Handle 404 NOT FOUND
 
-    return htmlText;
+        const markdownText = response.text;
+        const htmlText = parseMarkdown(markdownText);
+
+        return htmlText;
+    }
+    catch (err) {
+        return '';
+    }
 }
 
 let docsUrlMap: { [key: string]: string };
