@@ -8,7 +8,11 @@ import {getDocFilePath} from '../../../scripts/helpers/PathsHelper';
 
 @Component
 export default class extends Vue {
-    documentHtml: string;
+    documentHtml = '';
+
+    async mounted() {
+        this.documentHtml = await getDocumentHtml(this.$route.path);
+    }
 
     async beforeRouteUpdate() {
         this.documentHtml = await getDocumentHtml(this.$route.path);

@@ -1,6 +1,6 @@
 <template>
     <div id="DocumentViewComponent">
-        <h1>Hello There!</h1>
+        <div v-html="documentHtml"></div>
     </div>
 </template>
 
