@@ -4,11 +4,11 @@ import {Component} from 'vue-property-decorator';
 import {ManifestEntry, Section} from '../../../scripts/models/Manifest';
 import {getManifest} from '../../../scripts/config/Manifest';
 
-import SideNav from './ListGroup/ListGroup.vue';
+import ListGroup from './ListGroup/ListGroup.vue';
 
 @Component({
     components: {
-        SideNav
+        ListGroup
     }
 })
 export default class extends Vue {

@@ -9,7 +9,6 @@ export async function initThemes() {
         accent: {
             color: 'teal',
             hue: 900
-        },
-        background: 'grey'
+        }
     });
 }

@@ -1,5 +1,4 @@
-@import "~app/styles/includes/theme";
-
-nav {
-    box-shadow: $gray-lighter 0 1px 4px;
+.sidenav-links {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
