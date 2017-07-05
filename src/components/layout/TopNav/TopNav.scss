@@ -1,5 +1,8 @@
-#TopNavComponent {
-    box-shadow: black 0 0 4px;
+.md-toolbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 -2px 6px 4px;
 
     .bindr-logo {
         display: inline;

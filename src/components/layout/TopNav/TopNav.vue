@@ -1,7 +1,7 @@
 <template>
     <div id="TopNavComponent">
         <md-toolbar class="md-dense">
-            <md-button class="md-icon-button">
+            <md-button class="md-icon-button" @click="toggleSideNav">
                 <md-icon>menu</md-icon>
             </md-button>
 
@@ -16,4 +16,4 @@
 </template>
 
 <script lang="ts" src="./TopNav.ts"></script>
-<style lang="scss" src="./TopNav.scss"></style>
+<style lang="scss" src="./TopNav.scss" scoped></style>

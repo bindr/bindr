@@ -18,5 +18,7 @@ export default class extends Vue {
         const manifest = await getManifest();
 
         this.manifest = manifest;
+
+        (this.$root as any).mainSideNav = this.$refs.mainSideNav;
     }
 }

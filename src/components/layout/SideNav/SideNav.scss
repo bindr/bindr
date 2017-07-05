@@ -1,3 +1,16 @@
+.main-sidenav {
+    .md-sidenav-content {
+        top: 48px;
+        pointer-events: auto;
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    .md-backdrop.md-sidenav-backdrop {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 .sidenav-links {
     overflow-x: hidden;
     overflow-y: auto;

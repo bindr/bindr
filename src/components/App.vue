@@ -3,14 +3,16 @@
         <TopNav></TopNav>
 
         <div class="container">
-            <!-- Sidebar Navigtation -->
+            <!-- Sidebar Navigation -->
             <SideNav></SideNav>
 
-            <div class="col-xs-12  col-md-8 col-lg-9">
-                <div id="router-container">
-                    <router-view :key="$route.fullPath"></router-view>
-                </div>
-            </div>
+            <md-layout md-gutter md-align="center">
+                <md-layout md-flex-xsmall="95" md-flex-small="95" md-flex-large="50" md-flex-medium="75">
+                    <div id="router-container">
+                        <router-view :key="$route.fullPath"></router-view>
+                    </div>
+                </md-layout>
+            </md-layout>
         </div>
     </div>
 </template>
