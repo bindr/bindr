@@ -2,7 +2,7 @@
     <div id="AppComponent">
         <TopNav></TopNav>
 
-        <div class="container bindr-root">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-4 col-lg-3">
                     <SideNav></SideNav>
