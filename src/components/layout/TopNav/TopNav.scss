@@ -3,9 +3,15 @@
 .navbar {
     box-shadow: $gray-base 0 0 4px;
 
-    .navbar-brand-logo {
-        display: inline;
-        margin-top: -0.85rem;
-        vertical-align: top;
+    .navbar-brand {
+        padding-top: $navbar-height / 12;
+        padding-bottom: $navbar-height / 12;
+
+        .navbar-brand-logo {
+            display: inline;
+            vertical-align: -($navbar-height / 4);
+        }
+
+        font-size: $navbar-height * 0.45;
     }
 }
