@@ -1,9 +1,11 @@
 <template>
-    <nav id="SideNavComponent">
-        <div v-if="manifest">
-            <SideNav :entries="manifest.children"></SideNav>
-        </div>
-    </nav>
+    <div class="SideNavComponent">
+        <nav>
+            <div v-if="manifest">
+                <ListGroup :entries="manifest.children"></ListGroup>
+            </div>
+        </nav>
+    </div>
 </template>
 
 <script lang="ts" src="./SideNav.ts"></script>

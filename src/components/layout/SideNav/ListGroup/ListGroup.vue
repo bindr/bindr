@@ -7,7 +7,7 @@
                         {{item.title}}
                     </div>
                 </router-link>
-                <SideNav v-if="item.children" :entries="item.children"></SideNav>
+                <ListGroup v-if="item.children" :entries="item.children"></ListGroup>
             </div>
         </div>
     </div>
