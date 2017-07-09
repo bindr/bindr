@@ -2,11 +2,15 @@
     <div id="ListGroupContainer">
         <div class="list-group">
             <div class="list-group-item" v-for="item in entries">
-                <router-link :to="'/' + (item.url || '')" exact>
-                    <div class="list-group-item-title">
-                        {{item.title}}
-                    </div>
+
+                <a class="list-group-item-title" v-if="!item.url">
+                    {{item.title}}
+                </a>
+
+                <router-link class="list-group-item-title" v-if="item.url" :to="'/' + (item.url || '')" exact>
+                    {{item.title}}
                 </router-link>
+
                 <ListGroup v-if="item.children" :entries="item.children"></ListGroup>
             </div>
         </div>
