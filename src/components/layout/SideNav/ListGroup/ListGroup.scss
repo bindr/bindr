@@ -1,5 +1,8 @@
+@import "~app/styles/includes/theme";
+
 .list-group {
     margin-bottom: 0;
+    font-size: $font-size-base * 1.25;
 
     > .list-group-item {
         border: none;
@@ -8,6 +11,7 @@
 
         .list-group {
             margin-left: 2rem;
+            font-size: $font-size-base;
         }
 
         > a {
