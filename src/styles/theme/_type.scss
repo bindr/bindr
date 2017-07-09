@@ -1,0 +1,5 @@
+@mixin toTagAndClass($tag) {
+    #{$tag}, .#{$tag} {
+        @content;
+    }
+}

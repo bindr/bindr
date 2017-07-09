@@ -9,6 +9,15 @@ $brand-primary: hsl(205, 25%, 18%);
 $web-font-path: 'https://fonts.googleapis.com/css?family=Lato:300,400';
 $font-family-sans-serif: 'Lato', sans-serif;
 
+$font-size-base: 14px;
+
+$font-size-h1: $font-size-base * 2.4;
+$font-size-h2: $font-size-base * 1.9;
+$font-size-h3: $font-size-base * 1.6;
+$font-size-h4: $font-size-base * 1.25;
+$font-size-h5: $font-size-base * 1.0;
+$font-size-h6: $font-size-base * 0.8;
+
 $headings-font-weight: 400;
 
 // Elements
