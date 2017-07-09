@@ -5,11 +5,15 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 // Colors
 $brand-primary: hsl(205, 25%, 18%);
 
+$link-color: adjust-color($brand-primary, $saturation: 50%, $lightness: 25%);
+
 // Fonts
-$web-font-path: 'https://fonts.googleapis.com/css?family=Lato:300,400';
-$font-family-sans-serif: 'Lato', sans-serif;
+$web-font-path: 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700';
+$font-family-sans-serif: 'Droid Sans', sans-serif;
+$font-family-serif: 'Droid Sans', sans-serif;
 
 $font-size-base: 14px;
+$line-height-base: 1.6;
 
 $font-size-h1: $font-size-base * 2.4;
 $font-size-h2: $font-size-base * 1.9;
