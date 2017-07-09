@@ -1,11 +1,11 @@
-.md-toolbar {
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 -2px 6px 4px;
+@import "~app/styles/includes/theme";
 
-    .bindr-logo {
+.navbar {
+    box-shadow: $gray-base 0 0 4px;
+
+    .navbar-brand-logo {
         display: inline;
-        margin-bottom: -0.65rem;
+        margin-top: -0.85rem;
+        vertical-align: top;
     }
 }

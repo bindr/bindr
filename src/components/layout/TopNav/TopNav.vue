@@ -1,17 +1,15 @@
 <template>
-    <div id="TopNavComponent">
-        <md-toolbar class="md-dense">
-            <md-button class="md-icon-button" @click="toggleSideNav">
-                <md-icon>menu</md-icon>
-            </md-button>
-
-            <div class="md-title">
-                <img class="bindr-logo" src="../../../assets/images/logo_shadow.png" alt="Bindr Logo"/>
+    <div class="TopNavComponent">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">
+                        <img class="navbar-brand-logo" src="../../../assets/images/logo_shadow.png" alt="Bindr Logo"/>
+                        Bindr
+                    </a>
+                </div>
             </div>
-            <h2 class="md-title">
-                Bindr
-            </h2>
-        </md-toolbar>
+        </nav>
     </div>
 </template>
 

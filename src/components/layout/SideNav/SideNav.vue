@@ -1,10 +1,10 @@
 <template>
-    <div id="SideNavComponent">
-        <md-sidenav class="main-sidenav md-left md-fixed" md-swipeable ref="mainSideNav">
-            <div class="sidenav-links" v-if="manifest">
+    <div class="SideNavComponent">
+        <nav>
+            <div v-if="manifest">
                 <ListGroup :entries="manifest.children"></ListGroup>
             </div>
-        </md-sidenav>
+        </nav>
     </div>
 </template>
 

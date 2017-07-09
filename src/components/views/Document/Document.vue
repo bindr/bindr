@@ -1,5 +1,5 @@
 <template>
-    <div id="DocumentViewComponent">
+    <div class="DocumentViewComponent">
         <div v-if="documentHtml" v-html="documentHtml"></div>
     </div>
 </template>
