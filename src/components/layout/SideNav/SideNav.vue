@@ -2,7 +2,7 @@
     <div class="SideNavComponent">
         <nav>
             <div v-if="manifest">
-                <ListGroup :entries="manifest.children"></ListGroup>
+                <CollapsibleMenu :entry="manifest" :showTitle="false" :isOpen="true"></CollapsibleMenu>
             </div>
         </nav>
     </div>

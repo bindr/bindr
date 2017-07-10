@@ -4,11 +4,11 @@ import {Component} from 'vue-property-decorator';
 import {ManifestEntry, Section} from '../../../scripts/models/Manifest';
 import {getManifest} from '../../../scripts/config/Manifest';
 
-import ListGroup from './ListGroup/ListGroup.vue';
+import CollapsibleMenu from './CollapsibleMenu/CollapsibleMenu.vue';
 
 @Component({
     components: {
-        ListGroup
+        CollapsibleMenu
     }
 })
 export default class extends Vue {

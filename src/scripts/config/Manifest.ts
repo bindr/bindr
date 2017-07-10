@@ -3,8 +3,6 @@ import superagent from 'superagent';
 import {ManifestEntry} from '../models/Manifest';
 import {getCurrentConfig} from './Config';
 
-export const MANIFEST_FILE = 'manifest.json';
-
 let manifest: ManifestEntry;
 
 export async function loadManifest() {
