@@ -1,7 +1,9 @@
 <template>
     <div class="CollapsibleMenuContainer">
-        <div class="menu-item">
+        <div class="menu-item" :class="{'collapsed': !isMenuOpen}">
             <div class="menu-item-title" v-if="showTitle">
+                <span class="fa fa-chevron-down collapse-icon"></span>
+
                 <a v-if="!entry.url" @click="toggleChild">
                     {{entry.title}}
                 </a>
