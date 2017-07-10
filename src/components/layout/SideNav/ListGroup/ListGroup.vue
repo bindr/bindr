@@ -1,6 +1,6 @@
 <template>
     <div id="ListGroupContainer">
-        <div class="list-group">
+        <div class="list-group collapse" :class="{'in': isOpen}">
             <div class="list-group-item" v-for="item in entries">
 
                 <a class="list-group-item-title" v-if="!item.url">
@@ -11,7 +11,7 @@
                     {{item.title}}
                 </router-link>
 
-                <ListGroup v-if="item.children" :entries="item.children"></ListGroup>
+                <ListGroup v-if="item.children" :entries="item.children" :isOpen="false"></ListGroup>
             </div>
         </div>
     </div>

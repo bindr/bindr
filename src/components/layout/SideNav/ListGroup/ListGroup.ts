@@ -9,14 +9,6 @@ export default class extends Vue {
     @Prop()
     entries: ManifestEntry[];
 
-    @Prop()
-    level: number;
-
-    currentLevel: number;
-
-    constructor() {
-        super();
-
-        this.currentLevel = this.level || 1;
-    }
+    @Prop({type: Boolean, default: true})
+    isOpen: boolean;
 }
