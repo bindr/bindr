@@ -2,7 +2,9 @@
     <div class="CollapsibleMenuContainer">
         <div class="menu-item" :class="{'collapsed': !isMenuOpen}">
             <div class="menu-item-title" v-if="showTitle">
-                <span class="fa fa-chevron-down collapse-icon"></span>
+                <div class="collapse-icon" v-if="entry.type === 'section'">
+                    <span class="fa fa-chevron-down"></span>
+                </div>
 
                 <a v-if="!entry.url" @click="toggleChild">
                     {{entry.title}}

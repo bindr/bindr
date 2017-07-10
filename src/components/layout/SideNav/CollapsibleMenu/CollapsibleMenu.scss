@@ -18,8 +18,9 @@
         .collapse-icon {
             position: absolute;
             left: 0;
-            margin: 1.4rem 0;
-            font-size: 1rem;
+            margin: 1em -0.5em;
+
+            font-size: 0.8em;
 
             transform: rotate(0);
             transition: transform 0.25s ease;
@@ -33,6 +34,7 @@
     }
 
     .menu-item-children {
-        margin-left: 2rem;
+        padding-left: 2rem;
+        border-left: $gray-lighter 1px solid;
     }
 }
