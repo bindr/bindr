@@ -15,8 +15,8 @@
                 </router-link>
             </div>
 
-            <div class="menu-item-children collapse" :class="{'in': isMenuOpen}">
-                <CollapsibleMenu v-if="entry.children" v-for="item in entry.children" :entry="item"></CollapsibleMenu>
+            <div class="menu-item-children" v-show="isMenuOpen">
+                <CollapsibleMenu v-for="item in entry.children" :entry="item" :key="item.url"></CollapsibleMenu>
             </div>
         </div>
     </div>
