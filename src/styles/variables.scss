@@ -1,4 +1,29 @@
-$brand-primary: hsl(205, 25%, 18%);
-
+// Paths
 $fa-font-path: "~font-awesome/fonts/";
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+// Colors
+$brand-primary: hsl(205, 25%, 18%);
+
+$link-color: adjust-color($brand-primary, $saturation: 50%, $lightness: 25%);
+
+// Fonts
+$web-font-path: 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700';
+$font-family-sans-serif: 'Droid Sans', sans-serif;
+$font-family-serif: 'Droid Sans', sans-serif;
+
+$font-size-base: 14px;
+$line-height-base: 1.6;
+
+$font-size-h1: $font-size-base * 2.4;
+$font-size-h2: $font-size-base * 1.9;
+$font-size-h3: $font-size-base * 1.6;
+$font-size-h4: $font-size-base * 1.25;
+$font-size-h5: $font-size-base * 1.0;
+$font-size-h6: $font-size-base * 0.8;
+
+$headings-font-weight: 400;
+
+// Elements
+$navbar-height: 60px;
+$side-nav-width: 30rem;

@@ -26,7 +26,7 @@ non petis tenuere incursus et conata liquit mutet, manibusque.
 3. Habuit cum fraterna sudor gnato
 4. Sibi mihi quas terra ne nympha ulmo
 
-## Nebula patriam sequitur sedebat
+### Nebula patriam sequitur sedebat
 
 Ponderibus duos pectore solum. Visa mora tum cum gaudens et fuit. Hoc tibi arma
 diu effugere **velatus laudisque quae**. Dedere hoc suadeat pugnatque inplerat
@@ -38,7 +38,7 @@ Ingentia et precari et pati et somnos, iuro deos, in. Hanc virgo in quorum et
 negabo, Cinyra; in dolore in huic. **Talia** concrescere ad est mearum portis
 pennas!
 
-## Tangit maiusque florebat talia
+### Tangit maiusque florebat talia
 
 Coniunx torvis puteisque crudelia, in terrae soleat Acrota ire inducit annum
 semina, iras aut agmenque Pergus. Conspecta sinus adspicerent: **sua vixque

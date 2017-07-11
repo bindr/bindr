@@ -1,0 +1,10 @@
+@mixin toTagAndClass($tag) {
+    #{$tag}, .#{$tag} {
+        @content;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
